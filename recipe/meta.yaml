@@ -1,18 +1,18 @@
 {% set name = "zope.sqlalchemy" %}
-{% set version = "3.1" %}
+{% set version = "4.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zope.sqlalchemy-{{ version }}.tar.gz
-  sha256: d9c2c3be695c213c5e22b7f7c6a4a214fa8eb5940b033465ba1c10a9d8b346db
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/zope_sqlalchemy-{{ version }}.tar.gz
+  sha256: fcf33370f33df8b03a03b3abe99803e9ef6c17664fb721b8d11d1c0f50851ef6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
